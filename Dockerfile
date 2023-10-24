@@ -1,7 +1,7 @@
 #-------------------
 # Download scw
 #-------------------
-FROM alpine:3.8.5@sha256:2bb501e6173d9d006e56de5bce2720eb06396803300fe1687b58a7ff32bf4c14 as builder
+FROM alpine:3.18.4@sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978 as builder
 
 # renovate: datasource=github-releases depName=scw-cli lookupName=scaleway/scaleway-cli
 ARG SCW_VERSION=2.23.0
