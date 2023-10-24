@@ -25,8 +25,10 @@ GoOS       linux
 
 ### Debug image
 
-The debug images is based on `gcr.io/distroless/static-debian12:debug-nonroot` and contains a busybox shell for use in ci images.
-E.g. for GitLab CI:
+The debug images is based on `gcr.io/distroless/base-debian12:debug-nonroot` and contains a busybox shell for use in ci images.
+As scw's output is also available in json it also containts [jq](https://github.com/jqlang/jq).
+
+E.g. for GitLab CI do:
 
 ```
 list images:
