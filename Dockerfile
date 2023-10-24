@@ -4,7 +4,7 @@
 FROM alpine:3.18.4@sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978 as builder
 
 # renovate: datasource=github-releases depName=scw-cli lookupName=scaleway/scaleway-cli
-ARG SCW_VERSION=2.23.0
+ARG SCW_VERSION=2.24.0
 # renovate: datasource=github-releases depName=jq lookupName=jqlang/jq
 ARG JQ_VERSION=1.7
 ARG TARGETARCH
