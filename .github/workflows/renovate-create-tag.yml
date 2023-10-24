@@ -36,4 +36,5 @@ jobs:
         with:
           strategy: regex
           root: "Dockerfile"
-          regex_pattern: "SCW_VERSION=(v\\d+\\.\\d+\\.\\d+)"
+          regex_pattern: "SCW_VERSION=(\\d+\\.\\d+\\.\\d+)"
+          tag_prefix: "v"
