@@ -24,9 +24,22 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
+    strategy:
+      matrix:
+        image:
+        - minimal
+        - debug
+
+        include:
+        - suffix: -minimal
+          target: scw-cli-minimal
+
+        - suffix: -debug
+          target: scw-cli-debug
+
     uses: rwunderer/renovate/.github/workflows/reusable-docker-publish.yml@main
     with:
-      minimal-image: scw-cli-minimal
-      debug-image: scw-cli-debug
+      suffix: ${{ matrix.suffix }}
+      target: ${{ matrix.target }}
       docker-description: Minimal Docker image with Scaleway cli utility
     secrets: inherit
