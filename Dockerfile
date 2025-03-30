@@ -37,7 +37,7 @@ ENTRYPOINT ["/bin/scw"]
 #-------------------
 # Debug image
 #-------------------
-FROM gcr.io/distroless/base-debian12:debug-nonroot@sha256:e70398a6b01f7f50e25b9c1ef740247c3ff32f113e3427e6e43a983c3b96acf6 AS scw-cli-debug
+FROM gcr.io/distroless/base-debian12:debug-nonroot@sha256:76acc040228aed628435f9951e0bee94f99645efabcdf362e94a8c70ba422f99 AS scw-cli-debug
 
 COPY --from=builder /bin/jq /bin/jq
 COPY --from=builder /bin/scw /bin/scw
